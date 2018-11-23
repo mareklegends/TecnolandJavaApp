@@ -14,7 +14,7 @@ public class Menu {
     public static void mostarMenu(){
         System.out.println("<<<<<<<<<<<<>>>>>>>>>>>>");
         
-        System.out.println("1 >> Añadir juego");
+        System.out.println("1 >> Añadir jugador");
         System.out.println("2 >> Borrar jugador");
         System.out.println("3 >> Añadir puntos");
         System.out.println("4 >> Mostrar Top");

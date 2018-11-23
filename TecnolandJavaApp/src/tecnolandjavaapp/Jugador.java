@@ -14,6 +14,13 @@ public class Jugador {
     private String gamertag;
     private int puntos;
 
+    public Jugador(String gamertag, int puntos) {
+        this.gamertag = gamertag;
+        this.puntos = puntos;
+    }
+    
+    
+
     public String getGamertag() {
         return gamertag;
     }

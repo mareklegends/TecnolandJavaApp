@@ -30,8 +30,10 @@ public class Juego {
         for (int i = 0; i < vJugador.length; i++) {
             if (vJugador[i].getGamertag().equalsIgnoreCase(a.getGamertag())) {
                 bandera=true;
+                 break;
             }else{
                 bandera=false;
+                 break;
             }
  
         }
@@ -39,10 +41,9 @@ public class Juego {
         if (bandera=false) {
           for (int i = 0; i < vJugador.length; i++) {
             if (vJugador[i]==null) {
-                if (!(vJugador[i].getGamertag().equalsIgnoreCase(nombrejuego))) {
-                    
-                }
-                
+               
+               vJugador[i]=a;
+               break;
                 
             }
             
