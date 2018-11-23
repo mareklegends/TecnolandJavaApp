@@ -44,7 +44,6 @@ public class TecnolandJavaApp {
                 System.out.println("________________________"); 
                 
                 String addgametag="";
-                int addpuntos=0;
                 
                 System.out.println("Dime tu gamertag");
                                 
@@ -55,7 +54,7 @@ public class TecnolandJavaApp {
                 
                
                 
-                Jugador newj = new Jugador(addgametag, addpuntos);
+                Jugador newj = new Jugador(addgametag, 0);
                 
                 j1.añadirJugador(newj);
                 
@@ -84,10 +83,45 @@ public class TecnolandJavaApp {
             
             case 3:
                 
+                 System.out.println("<<<<<<<<<<<<>>>>>>>>>>>>");
+        
+                System.out.println("3 >> Añadir puntos");
+                
+                System.out.println("________________________"); 
+                              
+                
+                String addgametagpuntos="";
+                int addpuntos2=0;
+                
+                System.out.println("Dime tu gamertag");
+                                
+                Scanner addpuntosA = new Scanner(System.in);
+                Scanner addpuntosB = new Scanner(System.in);
+                
+                addgametagpuntos = addpuntosA.nextLine();
+                addpuntos2 = addpuntosB.nextInt();
+               
+                j1.añdirPuntosVector(addgametagpuntos, addpuntos2);
+                
+                System.out.println("<<<<<<<<<<<<>>>>>>>>>>>>"); 
+                
                 
                 break;
             
             case 4:
+                System.out.println("<<<<<<<<<<<<>>>>>>>>>>>>");
+        
+                System.out.println("4 >> Mostar Top");
+                
+                System.out.println("________________________"); 
+                
+                System.out.println(j1.getNombrejuego());
+                System.out.println("======================");
+               
+                
+                System.out.println(j1.listaJugadores());
+                
+                System.out.println("<<<<<<<<<<<<>>>>>>>>>>>>"); 
                 
                 
                 break;

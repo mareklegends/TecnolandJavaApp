@@ -25,20 +25,19 @@ public class Juego {
     
     public void añadirJugador(Jugador a){
         
-        boolean bandera=true;
+        boolean bandera=false;
         
         for (int i = 0; i < vJugador.length; i++) {
+                 if (vJugador[i]!=null) {
             if (vJugador[i].getGamertag().equalsIgnoreCase(a.getGamertag())) {
                 bandera=true;
-                 break;
-            }else{
-                bandera=false;
-                 break;
+                 
             }
+             }
  
         }
         
-        if (bandera=false) {
+        if (bandera==false) {
           for (int i = 0; i < vJugador.length; i++) {
             if (vJugador[i]==null) {
                
@@ -56,14 +55,26 @@ public class Juego {
     
     //listar jugadores
     
-    public void listaJugadores(){
+    public String listaJugadores(){
+        
+      String datos ="";
+     
+        
         int n=1;
-             System.out.println(nombrejuego);
-            System.out.println("====================");
+         
             for (int i = 0; i < vJugador.length; i++) {
-                System.out.println(">> " + vJugador[i].getGamertag() + " " + vJugador[i].getPuntos() + " ");
-                n++;
+              if (vJugador[i]!=null) {    
+                datos +="<< " + n + " >> " + vJugador[i].getGamertag() + " " + vJugador[i].getPuntos() + "\n";
+               
+             n++;
+                    }
+              
+                 
             }
+            
+           
+          return datos;
+          
     }
     
     
@@ -96,6 +107,10 @@ public class Juego {
           }
               
        
+    }
+
+    public String getNombrejuego() {
+        return nombrejuego;
     }
        
        
