@@ -24,13 +24,32 @@ public class Juego {
     //añadir jugadores al vector
     
     public void añadirJugador(Jugador a){
+        
+        boolean bandera=true;
+        
         for (int i = 0; i < vJugador.length; i++) {
+            if (vJugador[i].getGamertag().equalsIgnoreCase(a.getGamertag())) {
+                bandera=true;
+            }else{
+                bandera=false;
+            }
+ 
+        }
+        
+        if (bandera=false) {
+          for (int i = 0; i < vJugador.length; i++) {
             if (vJugador[i]==null) {
-                vJugador[i]=a;
-                break;
+                if (!(vJugador[i].getGamertag().equalsIgnoreCase(nombrejuego))) {
+                    
+                }
+                
+                
             }
             
+        }  
         }
+        
+        
         
     }
     
@@ -45,6 +64,10 @@ public class Juego {
                 n++;
             }
     }
+    
+    
+    
+    
     
     //borrar jugador
     
